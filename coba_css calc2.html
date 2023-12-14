@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Input to JavaScript</title>
+
+    <style>
+        /* CSS Styles */
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            /*background-color: #d35400; /* Dark Orange Background */
+        }
+
+        .input-container {
+            text-align: center;
+            background-color: #e67e22; /* Slightly Lighter Orange Box */
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-input {
+            width: calc(100% - 16px);
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            width: 50%; /* Adjust button width as needed */
+            padding: 10px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #netSalary {
+            font-weight: bold;
+            margin-top: 10px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="input-container">
+        <h2>Calculator Worker Salary</h2>
+        <label for="Masukkan Jumlah Gaji">Jumlah Gaji Basic</label>
+        <input type="text" id="basicSalary" class="user-input">
+
+        <label for="Masukkan Jumlah Potongan">Jumlah Potongan</label>
+        <input type="text" id="deductions" class="user-input">
+
+        <label for="Masukkan Jumlah Bonus">Jumlah Potongan</label>
+        <input type="text" id="bonus" class="user-input">
+
+        <button onclick="calculateD()">Calculate Net Salary</button>
+
+        <p id="netSalary">Net Salary: <span id="netSal"></span></p>
+    </div>
+
+    <script>
+        // JavaScript Code
+        function calculateD() {
+            var basicSalary = parseFloat(document.getElementById('basicSalary').value) || 0;
+            var deductions = parseFloat(document.getElementById('deductions').value) || 0;
+            var bonus = parseFloat(document.getElementById('bonus').value) || 0;
+
+            var netSalary = basicSalary - deductions + bonus;
+
+            document.getElementById('netSal').innerText = netSalary.toFixed(2);
+        }
+    </script>
+</body>
+</html>

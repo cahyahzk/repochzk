@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>Calculator Bank Savings</h2>
+
+<p>Masukkan nilai Tabungan awal</p>
+<button onclick="myFunction()">klik input Masukkan Nilai Tabungan awal</button>
+<p id="demo"></p>
+<p>Masukkan Invest Rate</p>
+<button onclick="myFunction1()">klik input Masukkan Invest Rate</button>
+<p id="demo1"></p>
+<p>Masukkan Saving Period</p>
+<button onclick="myFunction2()">klik input Masukkan Saving Period Simpanan</button>
+<p id="demo2"></p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+
+<script>
+function myFunction() {
+  let initialSavings = prompt("Masukkan jumlah tabungan awal: ");
+  if (initialSavings != null) {
+    document.getElementById("demo").innerHTML = "Rp " + initialSavings + " berhasil dimasukkan";
+  }
+  let annualInterestRate = prompt("Masukkan persentase bunga tahunan: ");
+  if (annualInterestRate != null) {
+    document.getElementById("demo1").innerHTML = "Bunga " + annualInterestRate + "% berhasil dimasukkan";
+  }
+  let savingPeriod = prompt("Masukkan Periode simpanan: ");
+  if (savingPeriod != null) {
+    document.getElementById("demo2").innerHTML = savingPeriod + " tahun berhasil dimasukkan";
+  }
+  document.getElementById("demo3").innerHTML = "Tabungan Awal = Rp " + initialSavings;
+  document.getElementById("demo4").innerHTML = "Tingkat bunga tahunan = " + annualInterestRate + "%";
+  document.getElementById("demo5").innerHTML = "Periode tahunan = " + savingPeriod + " tahun";
+  let annualInterest=annualInterestRate*savingPeriod*initialSavings/100
+  document.getElementById("demo6").innerHTML = "Bunga yang diperoleh = Rp " + annualInterest;
+  let totalSavings = parseInt(initialSavings) + parseInt(annualInterest)
+  document.getElementById("demo7").innerHTML = "Total tabungan akhir = Rp " + totalSavings;
+}
+</script>
+
+</body>
+</html>

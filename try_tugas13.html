@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" onClick="addCustomer()">Add Customer</button>
+        <button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" onClick="checkBalance()">Check Balance</button>
+        <button class="bg-yellow-500 hover:bg-yellow-700 text-white font-bold py-2 px-4 rounded" onClick="viewTransactionHistory()">View Transaction History</button>
+    </div>
+
+    <script>
+
+        function addCustomer(name, accountNumber){
+            let newCustomer = {
+                name: name,
+                accountNumber: accountNumber,
+                balance: 0,
+                transactionHistory: []
+            };
+            customers.push(newCustomer);
+        }
+
+        function checkBalance(accountNumber){
+
+        }
+
+        function viewTransactionHistory(accountNumber){
+
+        }
+
+        function transactionHandler(type, accountNumber, amount){
+            switch (type){
+                case 'deposit':
+                    deposit(accountNumber, amount);
+                    break;
+                case 'withdraw':
+                    withdraw(accountNumber, amount);
+                    break;
+                default:
+                    console.log("Invalid transaction type");
+            }
+        }
+            newCustomer("James", 1867368399)
+            checkBalance(1867368399)
+            viewTransactionHistory("withdraw",1867368399, 200000)
+        
+    </script>
+</body>
+</html>

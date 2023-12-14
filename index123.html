@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <button onClick="sortAlphabet()">sort Alphabet</button>
+      <button onClick="sortNumeric()">sort Numeric</button>
+      <button onClick="shuffleNumeric()">shuffle Numeric</button>
+
+      <h1 id="demo"></h1>
+    </div>
+
+    <script>
+      const points = [100, 1, 2, 7, 5, 90];
+      document.getElementById("demo").innerHTML = points;
+
+      function sortAlphabet() {
+        points.sort();
+        document.getElementById("demo").innerHTML = points;
+      }
+      function sortNumeric() {
+        points.sort((a, b) => a - b);
+        document.getElementById("demo").innerHTML = points;
+      }
+
+      function shuffleNumeric() {
+        points.sort(() => (Math.random() > 0.5 ? 1 : -1));
+        document.getElementById("demo").innerHTML = points; 
+      }
+    </script>
+  </body>
+</html>

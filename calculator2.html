@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<h2>Calculator Worker Salary</h2>
+
+<!-- <p>Masukkan nilai Gaji</p> -->
+<button onclick="myFunction()">klik input Masukkan nilai Gaji</button>
+<p id="demo"></p>
+<!-- <p>Masukkan Potongan</p> -->
+<button onclick="myFunction1()">klik input Masukkan Potongan</button>
+<p id="demo1"></p>
+<!-- <p>Masukkan Bonus</p> -->
+<button onclick="myFunction2()">klik input Masukkan Bonus</button>
+<p id="demo2"></p>
+
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+<p id="demo6"></p>
+<p id="demo7"></p>
+
+<script>
+function myFunction() {
+  let basicSalary = prompt("Masukkan jumlah Gaji: ");
+  // if (basicSalary != null) {
+  //   document.getElementById("demo").innerHTML = "Gaji Rp " + basicSalary + " berhasil dimasukkan";
+  // }
+  let deductions = prompt("Masukkan Potongan: ");
+  // if (deductions != null) {
+  //   document.getElementById("demo1").innerHTML = "Potongan Rp " + deductions + " berhasil dimasukkan";
+  // }
+  let bonus = prompt("Masukkan Bonus: ");
+  // if (bonus != null) {
+  //   document.getElementById("demo2").innerHTML = "Bonus Rp " + bonus +" berhasil dimasukkan";
+  // }
+  document.getElementById("demo3").innerHTML = "Gaji Awal = Rp " + basicSalary;
+  document.getElementById("demo4").innerHTML = "Potongan = Rp " + deductions;
+  document.getElementById("demo5").innerHTML = "Bonus = Rp " + bonus;
+  let netSalary = parseInt(basicSalary) - parseInt(deductions) + parseInt(bonus)
+  document.getElementById("demo7").innerHTML = "Gaji bersih diterima = Rp " + netSalary;
+}
+</script>
+
+</body>
+</html>
